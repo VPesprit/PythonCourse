@@ -1,3 +1,5 @@
+import re
+from pdfreader import text
 def palindrom(fname):
     cnt=0
     output=list()
@@ -12,8 +14,7 @@ def palindrom(fname):
                 else:
                     
                     break
-                
-            
+                        
     
     file.close() 
     for i in range (0,len(output[i])):
@@ -24,4 +25,8 @@ def palindrom(fname):
                
 
 
-palindrom('C:/Users/vpesp/VC projects/PythonCourse/text2.txt') 
+#palindrom('C:/Users/vpesp/VC projects/PythonCourse/text2.txt') 
+digits=(re.findall('\d{3}/\d{2}',text))
+print(digits)
+#for i in range(len(digits)):
+ #   print(digits[i])
